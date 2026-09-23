@@ -56,6 +56,11 @@ button = ctk.CTkButton(master=app, text="OPTION 3", font=font,
                                  fg_color=color1, height=100, width=400)
 button.place(relx=0.75, rely=0.8)
 
+#TOP RIGHT TOTAL PORTFOLIO
+button = ctk.CTkButton(master=app, text="PORTFOLIO VALUE", font=font, 
+                                 fg_color=color1, height=90, width=300)
+button.place(relx=0.8, rely=0.05)
+
 #INSTANTIATE THE LEFT SCROLLER
 frame = MyFrame(app, width=250, fg_color="black")
 frame.pack(side="left", fill="y", padx=10, pady=10)
