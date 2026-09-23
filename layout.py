@@ -3,9 +3,10 @@ import customtkinter as ctk
 ctk.set_appearance_mode("Dark")
 
 #GLOBAL DEFAULTS
+headerfont = ("arial", 32)
 font = ("arial", 20)
 color1 = "RED"
-color2 = "ORANGE"
+color2 = "DARK ORANGE"
 
 
 #LEFT STOCK PANEL
@@ -13,8 +14,19 @@ class MyFrame(ctk.CTkScrollableFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
-        self.label = ctk.CTkLabel(self, text="STOCKS", text_color="white")
+        self.label = ctk.CTkLabel(self, text="PORTFOLIO", text_color="white", font=headerfont)
         self.label.grid(row=0, column=0, padx=20)
+
+        button = ctk.CTkButton(self, text=" STOCK NAME", height=40, fg_color = color2)
+        button.grid(row=1, pady = 5)
+
+        button = ctk.CTkButton(self, text=" STOCK NAME", height=40, fg_color = color2)
+        button.grid(row=2, pady = 5)
+
+        button = ctk.CTkButton(self, text=" STOCK NAME", height=40, fg_color = color2)
+        button.grid(row=3, pady = 5)
+
+
 
 app = ctk.CTk() 
 
@@ -45,9 +57,8 @@ button = ctk.CTkButton(master=app, text="OPTION 3", font=font,
 button.place(relx=0.75, rely=0.8)
 
 #INSTANTIATE THE LEFT SCROLLER
-frame = MyFrame(app, width=250, fg_color=color2)
+frame = MyFrame(app, width=250, fg_color="black")
 frame.pack(side="left", fill="y", padx=10, pady=10)
-frame.label.configure(text="PORTFOLIO")
 
 
 app.mainloop()
