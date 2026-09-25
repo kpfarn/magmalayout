@@ -17,17 +17,17 @@ class MyFrame(ctk.CTkScrollableFrame):
         self.label.grid(row=0, column=0, padx=80)
 
         button = ctk.CTkButton(self, text=" STOCK NAME", height=100, 
-                               width=200, fg_color = color2, 
+                               width=200, fg_color = "black", border_color=color2, border_width=2,
                                font=font, command=stock_func)
         button.grid(row=1, pady = 5)
 
         button = ctk.CTkButton(self, text=" STOCK NAME", height=100,
-                            width=200, fg_color = color2, 
+                            width=200, fg_color = "black", border_color=color2, border_width=2, 
                             font=font, command=stock_func)
         button.grid(row=2, pady = 5)
 
         button = ctk.CTkButton(self, text=" STOCK NAME", height=100, 
-                               width=200, fg_color = color2, 
+                               width=200, fg_color = "black", border_color=color2, border_width=2, 
                                font=font, command=stock_func)
         button.grid(row=3, pady = 5)
 
@@ -68,20 +68,20 @@ image_label.place(relx=.4, rely=.3)
 
 #CONVERSATION OPTION BUTTONS
 button = ctk.CTkButton(master=app, text="OPTION 1", font=font, 
-                                 fg_color=color1, height=100, width=400)
+                                 fg_color = "black", border_color=color1, border_width=2, height=100, width=400)
 button.place(relx=0.25, rely=0.8)
 
 button = ctk.CTkButton(master=app, text="OPTION 2", font=font, 
-                                 fg_color=color1, height=100, width=400)
+                                 fg_color = "black", border_color=color1, border_width=2, height=100, width=400)
 button.place(relx=0.5, rely=0.8)
 
 button = ctk.CTkButton(master=app, text="OPTION 3", font=font, 
-                                 fg_color=color1, height=100, width=400)
+                                 fg_color = "black", border_color=color1, border_width=2, height=100, width=400)
 button.place(relx=0.75, rely=0.8)
 
 #TOP RIGHT TOTAL PORTFOLIO
 button = ctk.CTkButton(master=app, text="PORTFOLIO VALUE", font=font, 
-                                 fg_color=color1, height=90, width=300,
+                                 fg_color = "black", border_color=color1, border_width=2, height=90, width=300,
                                  command=portfolio_func)
 button.place(relx=0.8, rely=0.05)
 
@@ -93,7 +93,7 @@ container.pack(side="left", fill="both", expand=True)
 
 #HOME BUTTON
 button = ctk.CTkButton(master=app, text="HOME", font=font, 
-                                 fg_color=color1, height=60, width=100,
+                                 fg_color = "black", border_color=color1, border_width=2, height=60, width=100,
                                  command=home_func)
 button.place(relx=.2, rely=.05)
 

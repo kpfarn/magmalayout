@@ -17,4 +17,9 @@ class StockPage(ctk.CTkFrame):
         image_label = ctk.CTkLabel(self, image=my_image, text="")
         image_label.place(relx=.05, rely=.2)
 
+        box = ctk.CTkTextbox(self, width=800, height=600, 
+                             font=font, border_color=color1, border_width=2)
+        box.insert("0.0", "Example text, this is where the llm conversation replies land\n" * 50)
+        box.place(relx=0.42, rely=0.18)
+
         
