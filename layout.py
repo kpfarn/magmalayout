@@ -64,7 +64,7 @@ my_image = ctk.CTkImage(dark_image=Image.open(logo),
                                   size=(400, 300))
 
 image_label = ctk.CTkLabel(home_page, image=my_image, text="")
-image_label.place(relx=.4, rely=.3)
+image_label.place(relx=.39, rely=.3)
 
 #CONVERSATION OPTION BUTTONS
 button = ctk.CTkButton(master=app, text="OPTION 1", font=font, 
