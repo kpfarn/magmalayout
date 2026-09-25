@@ -67,17 +67,17 @@ image_label = ctk.CTkLabel(home_page, image=my_image, text="")
 image_label.place(relx=.4, rely=.3)
 
 #CONVERSATION OPTION BUTTONS
-button = ctk.CTkButton(master=home_page, text="OPTION 1", font=font, 
+button = ctk.CTkButton(master=app, text="OPTION 1", font=font, 
                                  fg_color=color1, height=100, width=400)
-button.place(relx=0.1, rely=0.8)
+button.place(relx=0.25, rely=0.8)
 
-button = ctk.CTkButton(master=home_page, text="OPTION 2", font=font, 
+button = ctk.CTkButton(master=app, text="OPTION 2", font=font, 
                                  fg_color=color1, height=100, width=400)
-button.place(relx=0.4, rely=0.8)
+button.place(relx=0.5, rely=0.8)
 
-button = ctk.CTkButton(master=home_page, text="OPTION 3", font=font, 
+button = ctk.CTkButton(master=app, text="OPTION 3", font=font, 
                                  fg_color=color1, height=100, width=400)
-button.place(relx=0.7, rely=0.8)
+button.place(relx=0.75, rely=0.8)
 
 #TOP RIGHT TOTAL PORTFOLIO
 button = ctk.CTkButton(master=app, text="PORTFOLIO VALUE", font=font, 
