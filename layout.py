@@ -103,5 +103,5 @@ portfolio_page.place(relwidth=1, relheight=1)
 stock_page.place(relwidth=1, relheight=1)
 home_page.tkraise()
 
-
+app.state=("zoomed")
 app.mainloop()
