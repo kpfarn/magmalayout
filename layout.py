@@ -2,7 +2,6 @@ import customtkinter as ctk
 from PIL import Image
 
 from globals import *
-
 from portfolio import PortfolioPage
 from stock import StockPage
 
@@ -31,8 +30,6 @@ class MyFrame(ctk.CTkScrollableFrame):
                                font=font, command=stock_func)
         button.grid(row=3, pady = 5)
 
-
-
 app = ctk.CTk(fg_color="black") 
 
 container = ctk.CTkFrame(app, fg_color="black")
@@ -41,10 +38,6 @@ home_page = ctk.CTkFrame(container, fg_color="black")
 portfolio_page = PortfolioPage(container, fg_color="black")
 stock_page = StockPage(container, fg_color="black")
 
-screen_width = app.winfo_screenwidth()
-screen_height = app.winfo_screenheight()
-
-app.geometry(f"{screen_width}x{screen_height}")
 
 def portfolio_func():
     portfolio_page.tkraise()
@@ -103,5 +96,4 @@ portfolio_page.place(relwidth=1, relheight=1)
 stock_page.place(relwidth=1, relheight=1)
 home_page.tkraise()
 
-app.state=("zoomed")
 app.mainloop()
