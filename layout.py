@@ -1,17 +1,12 @@
 import customtkinter as ctk
 from PIL import Image
 
+from globals import *
+
 from portfolio import PortfolioPage
 from stock import StockPage
 
 ctk.set_appearance_mode("Dark")
-
-#GLOBAL DEFAULTS
-headerfont = ("arial", 32)
-font = ("arial", 20)
-color1 = "RED"
-color2 = "DARK ORANGE"
-logo = "/mnt/chromeos/MyFiles/Downloads/magmaLogo.png"
 
 #LEFT STOCK PANEL
 class MyFrame(ctk.CTkScrollableFrame):
@@ -19,7 +14,7 @@ class MyFrame(ctk.CTkScrollableFrame):
         super().__init__(master, **kwargs)
 
         self.label = ctk.CTkLabel(self, text="STOCKS", text_color="white", font=headerfont)
-        self.label.grid(row=0, column=0, padx=50)
+        self.label.grid(row=0, column=0, padx=80)
 
         button = ctk.CTkButton(self, text=" STOCK NAME", height=100, 
                                width=200, fg_color = color2, 
@@ -43,8 +38,8 @@ app = ctk.CTk(fg_color="black")
 container = ctk.CTkFrame(app, fg_color="black")
 
 home_page = ctk.CTkFrame(container, fg_color="black")
-portfolio_page = PortfolioPage(container)
-stock_page = StockPage(container)
+portfolio_page = PortfolioPage(container, fg_color="black")
+stock_page = StockPage(container, fg_color="black")
 
 screen_width = app.winfo_screenwidth()
 screen_height = app.winfo_screenheight()

@@ -1,8 +1,18 @@
 import customtkinter as ctk
+from PIL import Image
+from globals import *
+
+stock_chart = "/mnt/chromeos/MyFiles/Downloads/single_stock.png"
 
 class StockPage(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
-        button = ctk.CTkButton(master=self, text="STOCK TEST")
-        button.place(relx=0.65, rely=0.8)
+        label = ctk.CTkLabel(self, text="STOCK NAME: STOCK", fg_color="transparent", text_color="white", font=font)
+        label.place(relx=0.45, rely=0.7)
+
+        my_image = ctk.CTkImage(dark_image=Image.open(stock_chart),
+                                  size=(400, 300))
+
+        image_label = ctk.CTkLabel(self, image=my_image, text="")
+        image_label.place(relx=.4, rely=.3)

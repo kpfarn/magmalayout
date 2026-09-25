@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from globals import *
 
 class PortfolioPage(ctk.CTkFrame):
     def __init__(self, master, **kwargs):
